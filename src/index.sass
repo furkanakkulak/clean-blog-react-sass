@@ -620,7 +620,11 @@ footer
 
     .contact-info
       display: flex
-      justify-content: space-around
+      justify-content: space-between
+
+      @media screen and (max-width: 600px)
+        flex-direction: column
+
 
     h3
       color: #fff
