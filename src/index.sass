@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  margin: 0
+
+a
+  text-decoration: none
+
+html
+  font-family: 'Open Sans'
+
+.container
+  width: 100%
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+
+@media (min-width: 768px)
+  .container
+    max-width: 750px
+
+@media (min-width: 992px)
+  .container
+    max-width: 970px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1170px
+
+@media (min-width: 1400px)
+  .container
+    max-width: 1320px
+
+// NAVBAR STYLES
+
+.navbar
+  padding: 0.5em 0 0.5em 0
+  height: 83px
+  background: #000
+  display: flex
+  align-items: center
+  box-sizing: border-box
+  position: absolute
+  top: 0
+  width: 100%
+  background: transparent
+  z-index: 100
+
+  @media screen and (max-width: 992px)
+    background-color: #fff
+    height: 57px
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-right: 1.5rem !important
+    padding-left: 1.5rem !important
+
+    @media screen and (min-width: 992px)
+      padding-right: 3rem !important
+      padding-left: 3rem !important
+
+    .mobile-menu
+      display: none
+      font-size: 0.75rem
+      font-weight: 800
+      padding: 0.55rem
+      text-transform: uppercase
+      color: rgba(0, 0, 0, 0.55)
+      border: 1px solid #dee2e6
+      background-color: #fff
+
+      &.active
+        border-color: #000
+        color: #000
+
+        svg
+          fill: #000
+
+      @media screen and (max-width: 992px)
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 0.25rem
+
+        svg
+          fill: rgba(0, 0, 0, 0.55)
+          size: 0.75rem
+
+    .logo
+      font-weight: 800
+      font-size: 20px
+      color: #fff
+
+      @media screen and (max-width: 992px)
+        color: #000
+
+    ul
+      display: flex
+      list-style: none
+
+      @media screen and (max-width: 992px)
+        display: none
+
+      li
+        margin: auto
+
+        a
+          padding: 24px 16px 24px 16px
+          text-transform: uppercase
+          font-size: 12px
+          font-weight: 800
+          letter-spacing: 0.0625em
+          text-transform: uppercase
+          color: #fff
+
+  ul.active
+    @media screen and (max-width: 992px)
+      display: flex
+      flex-direction: column
+      position: absolute
+      top: 57px
+      left: 0
+      width: 100%
+      background-color: #fff
+      z-index: 100
+      text-align: center
+
+      li
+        margin: 0
+        padding: 0
+        margin: auto
+
+        a
+          padding: 1rem 0
+          width: 100%
+          display: block
+          color: rgba(0, 0, 0, 0.55)
+
+// FOOTER STYLES
+
+footer
+  border-top: #dee2e6 1px solid
+  padding-top: 2rem
+
+  .social-links
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1rem
+
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 50px
+      height: 50px
+      box-sizing: border-box
+      background-color: #212529
+      border-radius: 50%
+
+      &:hover
+        background-color: #007189
+
+      svg
+        fill: white
+        font-size: 24px
+
+  .copyright
+    padding: 1rem 0
+    font-style: italic
+    text-align: center
+    font-size: 0.875em
+    font-weight: 400
+    color: #6c757d
+
+// HOME STYLES
+
+// HOME HEADER STYLES
+
+.Home-header
+  position: relative
+  margin-bottom: 3rem
+  padding-top: calc(8rem + 57px)
+  padding-bottom: 8rem
+  background: no-repeat center center
+  background-color: #6c757d
+  background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg')
+  background-size: cover
+  background-attachment: scroll
+
+  .site-heading
+    position: relative
+    text-align: center
+
+  h1
+    font-size: 3rem
+    color: #fff
+    font-weight: 800
+    line-height: 1.2
+
+    @media screen and (min-width: 992px)
+      font-size: 5rem
+
+  span
+    font-size: 1.5rem
+    font-weight: 300
+    line-height: 1.1
+    display: block
+    margin-top: 10px
+    color: #fff
+
+  @media screen and (min-width: 992px)
+    padding-top: 200px
+    padding-bottom: 200px
+
+.Home-header::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #212529
+  opacity: 0.5
+
+// HOME POSTS STYLES
+
+.posts
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  @media screen and (min-width: 992px)
+    width: 60%
+    margin: auto
+
+  .post-preview
+    padding-bottom: 2rem
+    max-width: 50rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    border-bottom: 1px solid #dee2e6
+
+    .post-title
+      font-size: 2.25rem
+      font-weight: 800
+      color: #212529
+      margin-top: 2rem
+      margin-bottom: 0.625rem
+
+    .post-subtitle
+      font-size: 1.75rem
+      font-weight: 300
+      color: #6c757d
+      margin-bottom: 1rem
+
+    .post-meta
+      font-size: 1.125rem
+      font-weight: 400
+      font-style: italic
+      color: #6c757d
+      margin-bottom: 1rem
+
+      a
+        color: #212529
+
+  .btn
+    margin-top: 2rem
+    margin-bottom: 2rem
+    padding: 1rem 1.75rem
+    background-color: #0085a1
+    color: white
+    margin-right: 0
+    margin-left: auto
+    font-size: 0.875rem
+    font-weight: 800
+    text-transform: uppercase
+
+    &:hover
+      background-color: #007189
+
+// ABOUT STYLES
+
+// HEADER STYLES
+
+.About-header
+  position: relative
+  margin-bottom: 3rem
+  padding-top: calc(8rem + 57px)
+  padding-bottom: 8rem
+  background: no-repeat center center
+  background-color: #6c757d
+  background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/about-bg.jpg')
+  background-size: cover
+  background-attachment: scroll
+
+  .site-heading
+    position: relative
+    text-align: center
+
+  h1
+    font-size: 3rem
+    color: #fff
+    font-weight: 800
+    line-height: 1.2
+
+    @media screen and (min-width: 992px)
+      font-size: 5rem
+
+  span
+    font-size: 1.5rem
+    font-weight: 300
+    line-height: 1.1
+    display: block
+    margin-top: 10px
+    color: #fff
+
+  @media screen and (min-width: 992px)
+    padding-top: 200px
+    padding-bottom: 200px
+
+.About-header::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #212529
+  opacity: 0.5
+
+.about
+  .content
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 2rem
+
+    @media screen and (min-width: 992px)
+      width: 60%
+      margin: auto
+
+    p
+      margin: 1rem 0
+      font-size: 1.25rem
+      font-weight: 400
+
+// SAMPLE POST STYLES
+
+.Samplepost-header
+  position: relative
+  margin-bottom: 3rem
+  padding-top: calc(8rem + 57px)
+  padding-bottom: 8rem
+  background: no-repeat center center
+  background-color: #6c757d
+  background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg')
+  background-size: cover
+  background-attachment: scroll
+
+  @media screen and (min-width: 992px)
+    padding-top: 12.5rem
+    padding-bottom: 12.5rem
+
+  .site-heading
+    position: relative
+    width: 80%
+    margin: auto
+
+  h1
+    font-size: 2.25rem
+    color: #fff
+    font-weight: 800
+    line-height: 1.2
+
+    @media screen and (min-width: 992px)
+      font-size: 3.5rem
+
+  span
+    font-size: 1.5rem
+    font-weight: 300
+    line-height: 1.1
+    display: block
+    margin-top: 10px
+    color: #fff
+
+  .meta
+    font-size: 1.25rem
+    font-weight: 300
+    font-style: italic
+    margin-top: 1.3rem
+    color: white
+
+    a
+      color: white
+
+.Samplepost-header::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #212529
+  opacity: 0.5
+
+.samplepost
+  width: 80%
+
+  .content
+    display: flex
+    flex-direction: column
+    padding-bottom: 2rem
+
+    @media screen and (min-width: 992px)
+      width: 60%
+      margin: auto
+
+    p
+      margin: 1rem 0
+      font-size: 1.25rem
+      font-weight: 400
+      line-height: 1.5
+
+    img
+      max-width: 100%
+      height: auto
+
+    .caption
+      font-size: 0.875rem
+      font-weight: 400
+      color: #6c757d
+      text-align: center
+      font-style: italic
+      width: 90%
+
+    .section-heading
+      font-size: 2rem
+      font-weight: 700
+      color: #212529
+      margin-top: 2rem
+      margin-bottom: 0.625rem
+      text-align: left
+
+    .blockquote
+      margin: 2rem 0
+      font-size: 1.25rem
+      font-weight: 300
+      font-style: italic
+      color: #6c757d
+
+    a
+      color: #212529
+      text-decoration: underline
+
+// CONTACT STYLES
+
+.Contact-header
+  position: relative
+  margin-bottom: 3rem
+  padding-top: calc(8rem + 57px)
+  padding-bottom: 8rem
+  background: no-repeat center center
+  background-color: #6c757d
+  background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/contact-bg.jpg')
+  background-size: cover
+  background-attachment: scroll
+  text-align: center
+
+  @media screen and (min-width: 992px)
+    padding-top: 12.5rem
+    padding-bottom: 12.5rem
+
+  .site-heading
+    position: relative
+    width: 90%
+    margin: auto
+
+  h1
+    font-size: 3rem
+    color: #fff
+    font-weight: 800
+    line-height: 1.2
+
+    @media screen and (min-width: 992px)
+      font-size: 5rem
+
+  span
+    font-size: 1.5rem
+    font-weight: 300
+    line-height: 1.1
+    display: block
+    margin-top: 10px
+    color: #fff
+
+.Contact-header::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #212529
+  opacity: 0.5
+
+.contact
+  display: flex
+  flex-direction: column
+  padding-bottom: 2rem
+
+  @media screen and (min-width: 992px)
+    width: 60%
+    margin: auto
+
+  p
+    margin: 1rem 0
+    font-size: 1.25rem
+    font-weight: 400
+    line-height: 1.5
+
+  .input-container
+    position: relative
+    margin-bottom: 20px
+    width: 100%
+
+    .input-label
+      position: absolute
+      top: 10px
+      left: 10px
+      transition: all 0.2s ease-out
+      pointer-events: none
+      color: #888
+      font-size: 16px
+      font-weight: normal
+
+    &.focused
+      .input-label
+        top: -12px
+        font-size: 12px
+
+    textarea
+      padding: 10px
+      font-size: 16px
+      width: 100%
+      resize: none
+      border: none
+      font-family: 'Open Sans'
+
+      border-bottom: 1px solid #ccc
+
+      &:focus-visible
+        outline: none
+
+    input
+      width: 100%
+      padding: 10px
+      font-size: 16px
+      border: none
+      border-bottom: 1px solid #ccc
+      outline: none
+      border-radius: 0
+
+      &:focus
+        border-color: #80c2d0
+
+    &.focused,
+    &.focused input:not([value=''])
+      .input-label.shrink
+        top: -12px
+        font-size: 12px
+        color: #6c757d
+
+  button
+    margin-bottom: 2rem
+    padding: 1rem 1.75rem
+    background-color: #0085a1
+    color: white
+    margin-right: 0
+    margin-left: auto
+    font-size: 0.875rem
+    font-weight: 800
+    border: none
+    text-transform: uppercase
+
+    &:hover
+      background-color: #007189
+
+    &:focus-visible
+      outline: none
+
+.submit
+  margin-top: 1rem
+  margin-bottom: 1rem
+  padding: 1rem
+  width: 100%
+  background-color: #0085a1
+  color: white
+  margin-right: 0
+  margin-left: auto
+  font-size: 1rem
+  font-weight: 800
+  border: none
+
+  h1
+    text-align: center
+
+  .review
+    background-color: #007189
+    padding: 0.75rem
+    margin-top: 1rem
+    position: relative
+
+    .contact-info
+      display: flex
+      justify-content: space-around
+
+    h3
+      color: #fff
+      font-size: 0.8rem
+      font-weight: 700
+      position: absolute
+      left: 0
+      top: -10px
+      font-style: italic
+
+    p
+      font-size: 0.8rem
+      font-weight: 400
+      line-height: 1.5
+      margin: 0.5rem
+
