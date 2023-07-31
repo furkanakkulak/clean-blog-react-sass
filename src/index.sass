@@ -1,16 +1,21 @@
+$primary-color: #0085a1
+$secondary-color: #6c757d
+$accent-color: #007189
+$font-family: 'Open Sans', sans-serif
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
+
 
 *, *::before, *::after
   box-sizing: border-box
 
 body
   margin: 0
+  font-family: $font-family
 
 a
   text-decoration: none
-
-html
-  font-family: 'Open Sans'
 
 .container
   width: 100%
@@ -76,11 +81,11 @@ html
       background-color: #fff
 
       &.active
-        border-color: #000
-        color: #000
+        border-color: $primary-color
+        color: $primary-color
 
         svg
-          fill: #000
+          fill: $primary-color
 
       @media screen and (max-width: 992px)
         display: flex
@@ -98,7 +103,7 @@ html
       color: #fff
 
       @media screen and (max-width: 992px)
-        color: #000
+        color: $primary-color
 
     ul
       display: flex
@@ -165,7 +170,7 @@ footer
       border-radius: 50%
 
       &:hover
-        background-color: #007189
+        background-color: $accent-color
 
       svg
         fill: white
@@ -189,7 +194,7 @@ footer
   padding-top: calc(8rem + 57px)
   padding-bottom: 8rem
   background: no-repeat center center
-  background-color: #6c757d
+  background-color: $secondary-color
   background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg')
   background-size: cover
   background-attachment: scroll
@@ -259,14 +264,14 @@ footer
     .post-subtitle
       font-size: 1.75rem
       font-weight: 300
-      color: #6c757d
+      color: $secondary-color
       margin-bottom: 1rem
 
     .post-meta
       font-size: 1.125rem
       font-weight: 400
       font-style: italic
-      color: #6c757d
+      color: $secondary-color
       margin-bottom: 1rem
 
       a
@@ -276,7 +281,7 @@ footer
     margin-top: 2rem
     margin-bottom: 2rem
     padding: 1rem 1.75rem
-    background-color: #0085a1
+    background-color: $accent-color
     color: white
     margin-right: 0
     margin-left: auto
@@ -285,7 +290,7 @@ footer
     text-transform: uppercase
 
     &:hover
-      background-color: #007189
+      background-color: $primary-color
 
 // ABOUT STYLES
 
@@ -297,7 +302,7 @@ footer
   padding-top: calc(8rem + 57px)
   padding-bottom: 8rem
   background: no-repeat center center
-  background-color: #6c757d
+  background-color: $secondary-color
   background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/about-bg.jpg')
   background-size: cover
   background-attachment: scroll
@@ -361,7 +366,7 @@ footer
   padding-top: calc(8rem + 57px)
   padding-bottom: 8rem
   background: no-repeat center center
-  background-color: #6c757d
+  background-color: $secondary-color
   background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/post-bg.jpg')
   background-size: cover
   background-attachment: scroll
@@ -437,7 +442,7 @@ footer
     .caption
       font-size: 0.875rem
       font-weight: 400
-      color: #6c757d
+      color: $secondary-color
       text-align: center
       font-style: italic
       width: 90%
@@ -455,7 +460,7 @@ footer
       font-size: 1.25rem
       font-weight: 300
       font-style: italic
-      color: #6c757d
+      color: $secondary-color
 
     a
       color: #212529
@@ -469,7 +474,7 @@ footer
   padding-top: calc(8rem + 57px)
   padding-bottom: 8rem
   background: no-repeat center center
-  background-color: #6c757d
+  background-color: $secondary-color
   background-image: url('https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/contact-bg.jpg')
   background-size: cover
   background-attachment: scroll
@@ -552,7 +557,7 @@ footer
       width: 100%
       resize: none
       border: none
-      font-family: 'Open Sans'
+      font-family: $font-family
 
       border-bottom: 1px solid #ccc
 
@@ -569,19 +574,19 @@ footer
       border-radius: 0
 
       &:focus
-        border-color: #80c2d0
+        border-color: $primary-color
 
     &.focused,
     &.focused input:not([value=''])
       .input-label.shrink
         top: -12px
         font-size: 12px
-        color: #6c757d
+        color: $secondary-color
 
   button
     margin-bottom: 2rem
     padding: 1rem 1.75rem
-    background-color: #0085a1
+    background-color: $primary-color
     color: white
     margin-right: 0
     margin-left: auto
@@ -591,7 +596,7 @@ footer
     text-transform: uppercase
 
     &:hover
-      background-color: #007189
+      background-color: $accent-color
 
     &:focus-visible
       outline: none
@@ -601,7 +606,7 @@ footer
   margin-bottom: 1rem
   padding: 1rem
   width: 100%
-  background-color: #0085a1
+  background-color: $primary-color
   color: white
   margin-right: 0
   margin-left: auto
@@ -613,7 +618,7 @@ footer
     text-align: center
 
   .review
-    background-color: #007189
+    background-color: $accent-color
     padding: 0.75rem
     margin-top: 1rem
     position: relative
@@ -640,4 +645,3 @@ footer
       font-weight: 400
       line-height: 1.5
       margin: 0.5rem
-
